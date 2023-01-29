@@ -1,0 +1,9 @@
+Student Иванов Poluchil(a) otcenku 5 po Математика
+Student Петрова Poluchil(a) otcenku 4 po Информатика 
+Student Краснов Poluchil(a) otcenku 5 po Физика 
+Student Иванов Poluchil(a) otcenku 5 po Математика 
+Student Петрова Poluchil(a) otcenku 4 po Информатика 
+Student Краснов Poluchil(a) otcenku 5 po Физика 
+Student Иванов Poluchil(a) otcenku 5 po Математика 
+Student Петрова Poluchil(a) otcenku 4 po Информатика 
+Student Краснов Poluchil(a) otcenku 5 po Физика 

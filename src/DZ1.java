@@ -51,13 +51,13 @@ public class DZ1 {
     укажите операцию, которую надо выполнить с этими числами"... "ответ: ...")
      */
     static void Zadacha4(){
-        int otvet = 0;
+        float otvet = 0;
         System.out.println("введите первое число");
         Scanner scanner = new Scanner(System.in);
-        int num1 = scanner.nextInt();
+        float num1 = scanner.nextFloat();
         System.out.println("введите vtoroe число");
         Scanner scanner2 = new Scanner(System.in);
-        int num2 = scanner2.nextInt();
+        float num2 = scanner2.nextFloat();
         boolean proverka = false;
         while (proverka==false){
             System.out.println("Vvedite operaciyu dlya chisel +,-,*,/ .");
