@@ -75,6 +75,7 @@ public class DZ2 {
             e.printStackTrace();
         }
         logger.addHandler(fileHandler);
+        fileHandler.close();
     }
     static void Puzyrek (int [] Array){
         boolean flag=true;
