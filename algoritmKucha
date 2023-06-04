@@ -1,0 +1,59 @@
+import java.util.Arrays;
+
+public class algoritmKucha {
+
+    public static void heapSort(int[] array) {
+        int size = array.length;
+
+        // Построение кучи (перегруппировка массива)
+        for (int i = size / 2 - 1; i >= 0; i--) {
+            heapify(array, size, i);
+        }
+
+        // Один за другим извлекаем элементы из кучи
+        for (int i = size - 1; i > 0; i--) {
+            // Перемещаем текущий корень в конец
+            int temp = array[0];
+            array[0] = array[i];
+            array[i] = temp;
+
+            // Вызываем heapify для уменьшения размера кучи
+            heapify(array, i, 0);
+        }
+    }
+
+    public static void heapify(int[] array, int size, int root) {
+        int largest = root; // Инициализируем наибольший элемент как корень
+        int leftChild = 2 * root + 1; // Левый дочерний элемент
+        int rightChild = 2 * root + 2; // Правый дочерний элемент
+
+        // Если левый дочерний элемент больше корня
+        if (leftChild < size && array[leftChild] > array[largest]) {
+            largest = leftChild;
+        }
+
+        // Если правый дочерний элемент больше, чем самый большой элемент на данный момент
+        if (rightChild < size && array[rightChild] > array[largest]) {
+            largest = rightChild;
+        }
+
+        // Если самый большой элемент не является корневым элементом
+        if (largest != root) {
+            int swap = array[root];
+            array[root] = array[largest];
+            array[largest] = swap;
+
+            // Рекурсивно выполняем heapify для затронутой подкучи
+            heapify(array, size, largest);
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] array = {12, 11, 13, 5, 6, 7};
+        System.out.println("Исходный массив: " + Arrays.toString(array));
+
+        heapSort(array);
+
+        System.out.println("Отсортированный массив: " + Arrays.toString(array));
+    }
+}
